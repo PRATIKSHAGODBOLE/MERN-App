@@ -1,3 +1,8 @@
+//https://mernapp-vpqf.onrender.com - live 
+//https://mernapp-vpqf.onrender.com/api/posts 
+//https://mernapp-vpqf.onrender.com/api/users
+
+
 const express = require("express")
 const mongoose = require("mongoose")
 const postRoute = require('./Routes/postsRoute')
