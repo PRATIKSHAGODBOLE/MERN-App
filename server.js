@@ -23,6 +23,7 @@ app.use(cors)
 app.use('/api/posts', postRoute)
 app.use('/api/users', userRoute)
 //Database Connections
+mongoose.set('strictQuery', true)
 mongoose
 .connect(DB_URL)
 .then(()=>{
