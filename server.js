@@ -8,7 +8,7 @@ const mongoose = require("mongoose")
 const postRoute = require('./Routes/postsRoute')
 const userRoute = require('./Routes/usersRoute')
 //require cors 
-// const cors = require('cors')
+const cors = require('cors')
 const app = express()
 require('dotenv').config()
 
@@ -23,7 +23,7 @@ app.get('/', (req, res)=>{
 //Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-// app.use(cors)
+app.use(cors)
 
 app.use('/api/posts', postRoute)
 app.use('/api/users', userRoute)
