@@ -5,6 +5,7 @@ const Post  = require('../Models/postsModel')
 
 //1. Get All Notes Fetch data
 const fetchAllPosts = async(req,res)=>{
+    console.log("fetchAllPosts")
     const Posts =  await Post.find({})
     res.json(Posts)
 }
@@ -76,10 +77,10 @@ const deletePost = async (req,res)=>{
     const PostID = req.params.id
  
     //2. Based on Id from parameter, we will use Mongoose command to fetch a Single Record from the database
-    const Post = await Post.findById(PostID)
+    const post = await Post.findById(PostID)
     
     //3. Respond back to client
-    res.status(200).json(Post)
+    res.status(200).json(post)
  }
 
 

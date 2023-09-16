@@ -1,4 +1,7 @@
+console.log("postRouterCall")
+
 const express =  require("express")
+
 //Function
 const router = express.Router()
 
@@ -10,6 +13,7 @@ const {fetchAllPosts, postNewPost, updatePost, deletePost, fetchAPost} = require
 //1. GET Method - Fetch the Data
 router.get('/',fetchAllPosts) 
 //---------------------------------------------------------------
+console.log("getRouteCall")
 //2. POST Method (new note post)
 router.post('/' , postNewPost) 
 
